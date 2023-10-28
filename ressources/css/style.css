@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 200vh;
+    background: #18181E;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #F1F1F1;
+}
+
+/* Barre de navigation */
+header > nav {
+    width: 100%;
+    height: 100%;
+    /* bien centrE */
+    line-height: 50px;
+    text-align: center;
+}
+
+header > nav  li {
+    margin: 0 3px;
+    display: inline-block;
+}
+
+header > nav a {
+    height: 50px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Animation underline lors du survole */
+header > nav a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    display: block;
+    border-radius: 3px;
+    background: black;
+    margin: -14px auto 0 auto;
+    transition: width 0.2s ease-out;
+}
+
+header > nav a:hover::after {
+    width: 100%;
+}
